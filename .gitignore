@@ -1,6 +1,11 @@
-data/*.db
-data/*.db-*
-uploads/*
-!uploads/.htaccess
-!uploads/.gitkeep
+node_modules/
+.next/
+out/
+.netlify/
+.env
+.env.local
+.env*.local
+next-env.d.ts
+*.tsbuildinfo
 .DS_Store
+supabase/.temp/
