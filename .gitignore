@@ -1,0 +1,6 @@
+data/*.db
+data/*.db-*
+uploads/*
+!uploads/.htaccess
+!uploads/.gitkeep
+.DS_Store
