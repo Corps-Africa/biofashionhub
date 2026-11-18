@@ -4,7 +4,6 @@ import PageHero from "@/components/PageHero";
 import { publicClient } from "@/lib/supabase/public";
 import type { Post } from "@/lib/types";
 
-export const revalidate = 300;
 export const metadata: Metadata = { title: "Style Journal", description: "Style tips, new arrivals and news from Bio Fashion Hub." };
 
 export default async function BlogPage() {

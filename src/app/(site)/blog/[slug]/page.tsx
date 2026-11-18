@@ -9,7 +9,6 @@ import { publicClient } from "@/lib/supabase/public";
 import type { Post } from "@/lib/types";
 import { formatDate, imgUrl, waLink } from "@/lib/util";
 
-export const revalidate = 300;
 type Props = { params: Promise<{ slug: string }> };
 
 const getPost = cache(async (slug: string) => {

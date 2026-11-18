@@ -5,7 +5,6 @@ import PageHero from "@/components/PageHero";
 import { getSettings } from "@/lib/data";
 import { s, telHref, waLink } from "@/lib/util";
 
-export const revalidate = 300;
 export const metadata: Metadata = { title: "Contact", description: "Visit Bio Fashion Hub in Tamale, call us or chat with us on WhatsApp." };
 
 export default async function ContactPage() {

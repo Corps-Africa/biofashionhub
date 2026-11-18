@@ -7,7 +7,6 @@ import { publicClient } from "@/lib/supabase/public";
 import type { Testimonial } from "@/lib/types";
 import { waLink } from "@/lib/util";
 
-export const revalidate = 300;
 export const metadata: Metadata = { title: "Testimonials", description: "What customers say about Bio Fashion Hub." };
 
 export default async function TestimonialsPage() {

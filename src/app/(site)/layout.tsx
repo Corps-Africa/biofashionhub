@@ -8,6 +8,10 @@ import { getSettings } from "@/lib/data";
 import { SITE_URL } from "@/lib/supabase/env";
 import { imgUrl, s, telHref, waLink } from "@/lib/util";
 
+// Pages load their content when visited (not at build time), so a deploy never
+// depends on the database being reachable, and edits show up immediately.
+export const dynamic = "force-dynamic";
+
 export const metadata = baseMetadata;
 export const viewport = baseViewport;
 

@@ -94,6 +94,12 @@ This prints a temporary password. The owner signs in at `/admin/login` and chang
 4. Deploy, then add the custom domain under **Domain management**. HTTPS is set up automatically.
 5. If you change the domain later, update `NEXT_PUBLIC_SITE_URL` and the Supabase URL settings, then redeploy.
 
+### If a Netlify build fails
+
+- **Branch:** check **Site configuration → Build & deploy** is set to the `supabase` branch. The `main` branch is the PHP version and can't be built by Netlify.
+- **Error message:** open the failed deploy and scroll up from the last line; the real error is a few lines above "Build script returned non-zero exit code".
+- **Database:** the build doesn't connect to Supabase. Public pages load their content when visited, so a deploy succeeds even before Supabase is set up. If a page shows "We'll be right back", check the two `NEXT_PUBLIC_SUPABASE_*` variables (then **redeploy**, because they're read at build time) and that both SQL files were run.
+
 ### Free-tier pausing
 
 Supabase pauses free projects after about a week without database activity.

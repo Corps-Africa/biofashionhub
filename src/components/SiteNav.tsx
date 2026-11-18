@@ -26,7 +26,7 @@ export default function SiteNav({ waHref }: { waHref: string }) {
       <nav className="main-nav" id="main-nav" aria-label="Main">
         <ul>
           {NAV.map(([label, href]) => (
-            <li key={href}><Link href={href} aria-current={active(href) ? "page" : undefined}>{label}</Link></li>
+            <li key={href}><Link href={href} aria-current={active(href) ? "page" : undefined} onClick={() => setOpen(false)}>{label}</Link></li>
           ))}
         </ul>
         <a className="btn btn-gold nav-cta" href={waHref} target="_blank" rel="noopener"><Icon name="whatsapp" /> Chat to order</a>

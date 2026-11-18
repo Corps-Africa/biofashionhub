@@ -1,10 +1,12 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { SUPABASE_CONFIGURED } from "@/lib/supabase/env";
 
 const PUBLIC_ADMIN_PATHS = ["/admin/login", "/admin/forgot"];
 
 /** Keeps the admin session fresh and sends signed-out visitors to the login page. */
 export async function middleware(request: NextRequest) {
+  if (!SUPABASE_CONFIGURED) return NextResponse.next({ request });
   let response = NextResponse.next({ request });
   const supabase = createServerClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, {
     cookies: {

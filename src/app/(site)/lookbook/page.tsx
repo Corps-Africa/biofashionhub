@@ -6,7 +6,6 @@ import { publicClient } from "@/lib/supabase/public";
 import type { GalleryItem } from "@/lib/types";
 import { imgUrl, waLink } from "@/lib/util";
 
-export const revalidate = 300;
 export const metadata: Metadata = { title: "Lookbook", description: "A look at kaftans, custom outfits and accessories styled by Bio Fashion Hub." };
 
 export default async function LookbookPage() {

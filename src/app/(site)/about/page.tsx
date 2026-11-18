@@ -6,7 +6,6 @@ import Paras from "@/components/Paras";
 import { getSettings } from "@/lib/data";
 import { imgUrl, initials, s, waLink } from "@/lib/util";
 
-export const revalidate = 300;
 export const metadata: Metadata = { title: "About Us", description: "Bio Fashion Hub is a fashion and lifestyle brand in Tamale providing quality, stylish and affordable clothing and accessories." };
 
 export default async function AboutPage() {

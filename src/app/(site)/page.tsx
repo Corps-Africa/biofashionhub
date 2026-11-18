@@ -7,7 +7,6 @@ import { publicClient } from "@/lib/supabase/public";
 import type { Category, GalleryItem, Post, Product, Testimonial } from "@/lib/types";
 import { imgUrl, s, telHref } from "@/lib/util";
 
-export const revalidate = 300;
 
 export default async function HomePage() {
   const sb = publicClient();
